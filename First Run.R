@@ -2,7 +2,7 @@ library(randomForest)
 library(caret)
 library(rpart)
 library(e1071)
-setwd("~/GitHub/trees")
+setwd("~/GitHub/Kaggle-Competition---Trees")
 tree <- read.csv(file="train.csv", head=TRUE, sep=",")
 tree$Cover_Type <- factor(tree$Cover_Type)
 set.seed(1354)
@@ -37,7 +37,7 @@ summary(accs)
 as.numeric(summary(accs)[3])/(as.numeric(summary(accs)[3])+as.numeric(summary(accs)[2]))
 importance(modelf)
 
-
+#Random Forest Approach shows to be the most accurate approach
 #After this modeling was completed, the soil types were relabeled.  
 #Instead of 40 variables that were boolean, they were all transformed into one variable from 1-40.
 #Similarily, Wilderness Area was changed from 4 booleans to one predictor with 4 variables

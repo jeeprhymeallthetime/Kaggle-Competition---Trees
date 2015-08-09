@@ -3,7 +3,7 @@ library(caret)
 library(rpart)
 library(e1071)
 set.seed(1354)
-setwd("~/GitHub/trees")
+setwd("~/GitHub/Kaggle-Competition---Trees")
 
 
 tree <- read.csv(file="relabeltrain.csv", head=TRUE, sep=",")
